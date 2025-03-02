@@ -8,5 +8,3 @@ class Planet():
          entity = Entity(model='sphere', color=color, scale=(radius, radius, radius), position=(distance, 0, 0))
          self.entities[name] = entity
          return entity
-
-

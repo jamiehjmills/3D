@@ -1,7 +1,6 @@
 from ursina import *
 from planet import Planet
 
-
 app = Ursina()
 solar_system = Planet()
 
@@ -46,49 +45,47 @@ def update():
     # mercury
     angle_mercury += time.dt * speed
     mercury.x = 1.158 * math.cos(angle_mercury)
-    mercury.y = 1.158 * math.sin(angle_mercury)
+    mercury.z = 1.158 * math.sin(angle_mercury)
+    mercury.rotation_z += 1
 
     # venus
     angle_venus += time.dt * speed
     venus.x = 2.164 * math.cos(angle_venus)
-    venus.y = 2.164 * math.sin(angle_venus)
+    venus.z = 2.164 * math.sin(angle_venus)
 
     # earth
     angle_earth += time.dt * speed
     earth.x = 2.992 * math.cos(angle_earth)
-    earth.y = 2.992 * math.sin(angle_earth)
+    earth.z = 2.992 * math.sin(angle_earth)
 
     # mars
     angle_mars += time.dt * speed
     mars.x = 4.558 * math.cos(angle_mars)
-    mars.y = 4.558 * math.sin(angle_mars)
+    mars.z = 4.558 * math.sin(angle_mars)
 
     # jupiter
     angle_jupiter += time.dt * speed
     jupiter.x = 5.572 * math.cos(angle_jupiter)
-    jupiter.y = 5.572 * math.sin(angle_jupiter)
+    jupiter.z = 5.572 * math.sin(angle_jupiter)
 
     # saturn
     angle_saturn += time.dt * speed
     saturn.x = 7.67 * math.cos(angle_saturn)
-    saturn.y = 7.67 * math.sin(angle_saturn)
+    saturn.z = 7.67 * math.sin(angle_saturn)
 
     # uranus
     angle_uranus += time.dt * speed
     uranus.x = 8.45 * math.cos(angle_uranus)
-    uranus.y = 8.45 * math.sin(angle_uranus)
+    uranus.z = 8.45 * math.sin(angle_uranus)
 
     # neptune
     angle_neptune += time.dt * speed
     neptune.x = 9.902 * math.cos(angle_neptune)
-    neptune.y = 9.902 * math.sin(angle_neptune)
+    neptune.z = 9.902 * math.sin(angle_neptune)
 
-    camera.position = (0, 0, 1)  # Example position
-
-
+    #camera.position = (0, 0, 1)  # Example position
     # if abs(x) > 3:
     #     speed *= -1
-
 
 app.run()
 
